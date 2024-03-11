@@ -1,8 +1,8 @@
 - 👋 Hi, This is Hari krishna
 - 🧑‍💻 App Developer
-- 🌱 I’m currently working as a App developer
+- 💻 I’m currently working as a App developer
 - 💞️ I’m looking to collaborate on ...
-- 📫 drug on coding world
+- 💙 drug on coding world
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
