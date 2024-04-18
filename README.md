@@ -1,7 +1,6 @@
 - 👋 Hi, This is Hari krishna
 - 🧑‍💻 App Developer
 - 💻 I’m currently working as an App developer
-- 💞️ I’m looking to collaborate on ...
 - 💙 drug on coding world
 
 
