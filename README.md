@@ -1,6 +1,6 @@
 <div align="center">
 
-# ☁️ Hey, I'm Hari Krishna
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=45&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&width=600&height=70&lines=%E2%98%81%EF%B8%8F+Hey%2C+I'm+Hari+Krishna;%F0%9F%9A%80+Cloud+Engineer;%F0%9F%93%B1+Flutter+Developer;%E2%9A%A1+Automation+Expert" alt="Animated Name" />
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=F7931E&center=true&vCenter=true&width=600&lines=AWS+Cloud+Engineer;Flutter+App+Developer;Automation+Enthusiast;Building+Scalable+Solutions+%F0%9F%9A%80" alt="Typing SVG" />
 
@@ -51,7 +51,7 @@
   &nbsp;&nbsp;&nbsp;
   <img src="https://cdn.worldvectorlogo.com/logos/aws-api-gateway.svg" alt="API Gateway" width="50" height="50" />
   &nbsp;&nbsp;&nbsp;
-  <img src="https://files.codingninjas.in/article_images/custom-upload-1684405531-0eb4e0ba.webp" alt="DynamoDB" width="50" height="50" style="border-radius:8px;" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png" alt="DynamoDB" width="50" height="50" style="border-radius:8px;" />
   &nbsp;&nbsp;&nbsp;
   <img src="https://cdn.worldvectorlogo.com/logos/aws-cloudformation.svg" alt="CloudFormation" width="50" height="50" />
   &nbsp;&nbsp;&nbsp;
@@ -125,16 +125,16 @@
 ## 📫 Connect with Me
 
 <p align="center">
-  <a href="https://harikrish-portfolio.web.app">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  <a href="https://harikrish-portfolio.web.app" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" height="35"/>
   </a>
-  &nbsp;&nbsp;
-  <a href="https://linkedin.com/in/hari-krish-13300b27a">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://linkedin.com/in/hari-krish-13300b27a" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="35"/>
   </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/Harikrishna2525">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Harikrishna2525" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" height="35"/>
   </a>
 </p>
 
