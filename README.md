@@ -1,5 +1,5 @@
 <h1 align="center">☁️ Hey, I'm Hari Krishna</h1>
-<h3 align="center">🚀 AWS Cloud Engineer | Flutter App Developer | AI Automation Enthusiast</h3>
+<h3 align="center">🚀 AWS Cloud Engineer | Flutter App Developer | Automation Enthusiast</h3>
 
 ---
 
@@ -20,41 +20,49 @@
 ---
 
 ### ☁️ AWS & Cloud Technologies
-<p>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/EC2-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white" />
-  <img src="https://img.shields.io/badge/CloudFront-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white" />
-  <img src="https://img.shields.io/badge/API%20Gateway-FF4F00?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/CloudFormation-D13212?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/IAM-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" />
+<p align="center">
+  <img src="https://cdn.worldvectorlogo.com/logos/amazon-web-services-2.svg" alt="AWS" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/amazon-ec2.svg" alt="EC2" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/amazon-s3-simple-storage-service.svg" alt="S3" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/aws-cloudfront.svg" alt="CloudFront" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg" alt="Lambda" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/aws-api-gateway.svg" alt="API Gateway" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/amazon-dynamodb.svg" alt="DynamoDB" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/aws-cloudformation.svg" alt="CloudFormation" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/aws-iam.svg" alt="IAM" width="90" height="90" />
 </p>
 
 ---
 
-### 🧰 Development & Automation Stack
-<p>
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-  <img src="https://img.shields.io/badge/REST%20API-005571?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/n8n-A9225C?style=for-the-badge&logo=n8n&logoColor=white" />
-  <img src="https://img.shields.io/badge/Notion%20AI-000000?style=for-the-badge&logo=notion&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
+### 💻 Development Stack
+<p align="center">
+  <img src="https://cdn.worldvectorlogo.com/logos/flutter.svg" alt="Flutter" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" alt="Dart" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/rest-api-1.svg" alt="REST API" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="Postman" width="90" height="90" />
+</p>
+
+---
+
+### 🤖 AI & Automation Stack
+<p align="center">
+  <img src="https://cdn.worldvectorlogo.com/logos/n8n.svg" alt="n8n" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/notion-logo.svg" alt="Notion AI" width="90" height="90" />
+  <img src="https://seeklogo.com/images/G/google-gemini-logo-DAED04D7E0-seeklogo.com.png" alt="Gemini API" width="90" height="90" />
+  <img src="https://seeklogo.com/images/G/groq-logo-7D2A6C9E86-seeklogo.com.png" alt="Groq API" width="90" height="90" />
 </p>
 
 ---
 
 ### ⚙️ Server, Networking & DevOps Tools
-<p>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
-  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" />
-  <img src="https://img.shields.io/badge/DuckDNS-FFCC00?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Networking-0078D7?style=for-the-badge" />
+<p align="center">
+  <img src="https://cdn.worldvectorlogo.com/logos/linux-tux.svg" alt="Linux" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" alt="Ubuntu" width="90" height="90" />
+  <img src="https://cdn.worldvectorlogo.com/logos/nginx-1.svg" alt="Nginx" width="90" height="90" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/DuckDNS_logo.png" alt="DuckDNS" width="90" height="90" />
+  <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Networking" width="90" height="90" />
 </p>
 
 ---
