@@ -1,5 +1,12 @@
-<h1 align="center">☁️ Hey, I'm Hari Krishna</h1>
-<h3 align="center">🚀 AWS Cloud Engineer | Flutter App Developer | Automation Enthusiast</h3>
+<div align="center">
+
+# ☁️ Hey, I'm Hari Krishna
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=F7931E&center=true&vCenter=true&width=600&lines=AWS+Cloud+Engineer;Flutter+App+Developer;Automation+Enthusiast;Building+Scalable+Solutions+%F0%9F%9A%80" alt="Typing SVG" />
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+
+</div>
 
 <br/>
 
@@ -26,6 +33,8 @@
 🧠 Showcasing hands-on projects in EC2, S3, CloudFront, and full-stack automation with AWS services.
 
 <br/>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ## ☁️ AWS & Cloud Technologies
 
@@ -99,6 +108,8 @@
 
 <br/>
 
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+
 ## 🧩 Projects & Work
 
 ☁️ **AWS Deployments:** EC2-hosted apps with Nginx, S3 static hosting, CloudFront distribution, and SSL setup.
@@ -113,16 +124,34 @@
 
 ## 📫 Connect with Me
 
-🌐 **Portfolio:** [harikrish-portfolio.web.app](https://harikrish-portfolio.web.app)
-
-💼 **LinkedIn:** [linkedin.com/in/hari-krish-13300b27a](https://linkedin.com/in/hari-krish-13300b27a)
-
-🐙 **GitHub:** [github.com/Harikrishna2525](https://github.com/Harikrishna2525)
+<p align="center">
+  <a href="https://harikrish-portfolio.web.app">
+    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://linkedin.com/in/hari-krish-13300b27a">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/Harikrishna2525">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
 
 <br/>
 
----
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+</div>
+
+<br/>
 
 <p align="center">
-  <b>⭐ Building Cloud + App Solutions with AWS & Flutter | Automating Everything Possible 🚀</b>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Building+Cloud+%2B+App+Solutions+with+AWS+%26+Flutter;Automating+Everything+Possible+%F0%9F%9A%80;Let's+Build+Something+Amazing+Together!" alt="Footer Typing SVG" />
 </p>
+
+<div align="center">
+  
+![Profile Views](https://komarev.com/ghpvc/?username=Harikrishna2525&color=blueviolet&style=for-the-badge)
+
+</div>
