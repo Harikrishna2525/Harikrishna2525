@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=45&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&width=600&height=70&lines=%E2%98%81%EF%B8%8F+Hey%2C+I'm+Hari+Krishna;%F0%9F%9A%80+Cloud+Engineer;%F0%9F%93%B1+Flutter+Developer;%E2%9A%A1+Automation+Expert" alt="Animated Name" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=45&duration=2000&pause=500&color=00A8E8&center=true&vCenter=true&width=600&height=70&lines=%E2%98%81%EF%B8%8F+Hey%2C+I'm+Hari+Krishna;%F0%9F%9A%80+Cloud+Engineer;%F0%9F%93%B1+Flutter+Developer;%F0%9F%A4%96+AI+Automation+Expert" alt="Animated Name" />
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=F7931E&center=true&vCenter=true&width=600&lines=AWS+Cloud+Engineer;Flutter+App+Developer;Automation+Enthusiast;Building+Scalable+Solutions+%F0%9F%9A%80" alt="Typing SVG" />
+<h3 align="center">🚀 AWS Cloud Engineer | Flutter App Developer | AI Automation Enthusiast</h3>
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
 
