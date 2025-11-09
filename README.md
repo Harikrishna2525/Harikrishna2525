@@ -30,7 +30,7 @@
 
 📁 **AWS Portfolio:** [harikrish-portfolio.web.app](https://harikrish-portfolio.web.app)
 
-🧠 Showcasing hands-on projects in EC2, S3, CloudFront, and full-stack automation with AWS services.
+🧠 Showcasing hands-on projects in EC2, S3, CloudFront, and full-stack Servless & IAC automation with AWS services.
 
 <br/>
 
