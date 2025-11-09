@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=45&duration=2000&pause=500&color=00A8E8&center=true&vCenter=true&width=600&height=70&lines=%E2%98%81%EF%B8%8F+Hey%2C+I'm+Hari+Krishna;%F0%9F%9A%80+Cloud+Engineer;%F0%9F%93%B1+Flutter+Developer;%F0%9F%A4%96+AI+Automation+Expert" alt="Animated Name" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=45&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&width=600&height=70&lines=%E2%98%81%EF%B8%8F+Hey%2C+I'm+Hari+Krishna;%F0%9F%9A%80+Cloud+Engineer;%F0%9F%93%B1+Flutter+Developer;%F0%9F%A4%96+AI+Automation+Expert" alt="Animated Name" />
 
 <h3 align="center">🚀 AWS Cloud Engineer | Flutter App Developer | AI Automation Enthusiast</h3>
 
