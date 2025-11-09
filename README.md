@@ -42,7 +42,7 @@
   &nbsp;&nbsp;&nbsp;
   <img src="https://cdn.worldvectorlogo.com/logos/aws-api-gateway.svg" alt="API Gateway" width="50" height="50" />
   &nbsp;&nbsp;&nbsp;
-  <img src="https://miro.medium.com/1*7JeACkx4Q1El_HZdOMfw9Q.png" alt="DynamoDB" width="50" height="50" style="border-radius:8px;" />
+  <img src="https://files.codingninjas.in/article_images/custom-upload-1684405531-0eb4e0ba.webp" alt="DynamoDB" width="50" height="50" style="border-radius:8px;" />
   &nbsp;&nbsp;&nbsp;
   <img src="https://cdn.worldvectorlogo.com/logos/aws-cloudformation.svg" alt="CloudFormation" width="50" height="50" />
   &nbsp;&nbsp;&nbsp;
