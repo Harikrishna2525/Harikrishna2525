@@ -14,7 +14,7 @@
 
 🧑‍💻 I'm an **AWS Cloud Engineer** with hands-on experience designing, deploying, and managing cloud infrastructure.
 
-🌩️ I **build and design cloud architectures** using EC2, S3, CloudFront, Lambda, API Gateway, and DynamoDB.
+🌩️ I **build and design cloud architectures** using EC2, S3, CloudFront, VPC, Subnets, Route Table, IGW,  Lambda, API Gateway, and DynamoDB.
 
 🧠 Skilled in **CloudFormation, networking, Linux (Ubuntu), and server configuration with Nginx**.
 
