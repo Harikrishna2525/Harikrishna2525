@@ -57,7 +57,7 @@ Single EC2 deployments create a single point of failure and downtime.
 - EC2 instances running a Dockerized application
 - CloudWatch for health metrics and monitoring
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](https://github.com/Harikrishna2525/Aws-ALB-ASG-auto-healing/blob/master/docs/architecture.png)
 
 ---
 
