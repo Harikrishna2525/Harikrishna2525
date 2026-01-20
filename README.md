@@ -17,23 +17,25 @@ Designing reliable, fault-tolerant AWS infrastructure with real failure testing 
 
 **Responsibilities:**
 - Design and deploy AWS infrastructure for web applications
-- Implement availability, fault tolerance, and recovery mechanisms
-- Configure load balancers and health checks
-- Manage EC2-based systems and containerized workloads
-- Debug infrastructure-level issues (networking, instance health, service failures)
-- Automate instance bootstrapping using User Data and basic IaC
+- Build fault-tolerant and auto-healing systems
+- Configure load balancing, health checks, and traffic routing
+- Manage EC2-based and serverless workloads
+- Debug infrastructure-level issues (networking, compute, service health)
+- Automate deployments and bootstrapping using User Data and IaC
+- Monitor systems using logs, metrics, and alarms
 
 ---
 
 ## 🧑‍💻 About Me
 
-I’m a hands-on Cloud / Infrastructure Engineer focused on how systems fail and recover, not just how they are deployed.
+I’m a hands-on Cloud / Infrastructure Engineer focused on how systems **fail, recover, and scale**, not just how they are deployed.
 
 I work with:
-- Failure-first architecture thinking
+- Failure-first infrastructure design
 - Real testing of unhealthy scenarios
-- Simple, explainable AWS designs
-- Production-style deployment practices
+- EC2 and serverless-based architectures
+- AWS-native monitoring and logging
+- Simple, explainable designs suitable for production
 
 Flutter experience exists, but cloud infrastructure is my primary career focus.
 
@@ -53,6 +55,7 @@ Single EC2 deployments create a single point of failure and downtime.
 - Target Group with application-level health checks
 - Auto Scaling Group with Launch Template
 - EC2 instances running a Dockerized application
+- CloudWatch for health metrics and monitoring
 
 ![Architecture Diagram](docs/architecture.png)
 
@@ -74,6 +77,7 @@ Single EC2 deployments create a single point of failure and downtime.
 
 - Load balancing and health check behavior
 - Auto Scaling replacement mechanics
+- CloudWatch-based monitoring awareness
 - Fault-tolerant infrastructure design
 - AWS networking fundamentals
 - Production-style deployment mindset
@@ -82,20 +86,30 @@ Single EC2 deployments create a single point of failure and downtime.
 
 ## ☁️ Core Technical Stack
 
-### AWS & Cloud
+### Compute & Networking
 - EC2
 - Application Load Balancer (ALB)
 - Auto Scaling Groups (ASG)
 - Target Groups & Health Checks
-- VPC, Subnets, Route Tables, IGW
+- VPC, Subnets, Route Tables, Internet Gateway
 - Security Groups
+
+### Serverless & Backend Services
+- AWS Lambda
+- API Gateway (REST APIs)
+- DynamoDB (NoSQL data storage)
+
+### Storage & CDN
+- Amazon S3 (static hosting, object storage)
+- CloudFront (content delivery & caching)
 
 ### Containers & OS
 - Docker
 - Linux (Ubuntu)
-- Nginx
+- Nginx (reverse proxy & server configuration)
 
-### Infrastructure & Ops
+### Monitoring & Operations
+- Amazon CloudWatch (logs, metrics, alarms)
 - User Data bootstrapping
 - Basic CloudFormation
 - CI/CD fundamentals
@@ -105,10 +119,10 @@ Single EC2 deployments create a single point of failure and downtime.
 
 ## 🔐 IAM Awareness
 
-- IAM Roles for EC2
-- Least-privilege access usage
-- No hardcoded credentials
-- Clear separation of compute and permissions
+- IAM Roles for EC2 and Lambda
+- Least-privilege access patterns
+- Service-to-service authentication
+- Avoiding hardcoded credentials
 
 ---
 
@@ -119,10 +133,11 @@ https://harikrish-portfolio25.web.app/
 
 Includes:
 - EC2 + Nginx deployments
-- S3 static hosting
-- CloudFront distributions
+- Auto-healing infrastructure demos
+- S3 static hosting + CloudFront
+- Serverless APIs using Lambda & API Gateway
+- DynamoDB-backed workflows
 - SSL-enabled architectures
-- Infrastructure-focused demos
 
 ---
 
@@ -131,6 +146,7 @@ Includes:
 - Cloud Engineer (L1–L2)
 - Infrastructure Engineer (Junior–Mid)
 - Platform / Infra roles in startups or product teams
+- Teams using EC2 + Serverless hybrid architectures
 
 ---
 
