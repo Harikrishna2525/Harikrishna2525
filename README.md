@@ -1,157 +1,143 @@
+# ☁️ Hari Krishna — Cloud / Infrastructure Engineer
+
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=45&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&width=600&height=70&lines=%E2%98%81%EF%B8%8F+Hey%2C+I'm+Hari+Krishna;%F0%9F%9A%80+Cloud+Engineer;%F0%9F%93%B1+Flutter+Developer" alt="Animated Name" />
-
-<h3 align="center">🚀 AWS Cloud Engineer | Flutter App Developer </h3>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=600&size=30&pause=900&color=36BCF7&center=true&vCenter=true&width=700&lines=Cloud+%2F+Infrastructure+Engineer;Auto-Healing+AWS+Architectures;Failure-Tested+Systems" />
 
 </div>
 
-<br/>
+Designing reliable, fault-tolerant AWS infrastructure with real failure testing and production-style deployment practices.
 
-## 💫 About Me
+---
 
-🧑‍💻 I'm an **AWS Cloud Engineer** with hands-on experience designing, deploying, and managing cloud infrastructure.
+## 🎯 Role Definition
 
-🌩️ I **build and design cloud architectures** using EC2, S3, CloudFront, VPC, Subnets, Route Table, IGW,  Lambda, API Gateway, and DynamoDB.
+**Primary Role:**  
+**Cloud / Infrastructure Engineer (L1–L2)**
 
-🧠 Skilled in **CloudFormation, networking, Linux (Ubuntu), and server configuration with Nginx**.
+**Responsibilities:**
+- Design and deploy AWS infrastructure for web applications
+- Implement availability, fault tolerance, and recovery mechanisms
+- Configure load balancers and health checks
+- Manage EC2-based systems and containerized workloads
+- Debug infrastructure-level issues (networking, instance health, service failures)
+- Automate instance bootstrapping using User Data and basic IaC
 
-📱 Also a **Flutter Developer** with multiple production apps published on the Play Store.
+---
 
-⚙️ Experienced in integrating REST APIs, Firebase, and automating cloud workflows using n8n.
+## 🧑‍💻 About Me
 
-💡 Focused on combining **Cloud + App Development** to deliver scalable, real-world solutions.
+I’m a hands-on Cloud / Infrastructure Engineer focused on how systems fail and recover, not just how they are deployed.
 
-<br/>
+I work with:
+- Failure-first architecture thinking
+- Real testing of unhealthy scenarios
+- Simple, explainable AWS designs
+- Production-style deployment practices
 
-## 🌐 My Cloud Portfolio
+Flutter experience exists, but cloud infrastructure is my primary career focus.
 
-📁 **AWS Portfolio:** [harikrish-portfolio.web.app](https://harikrish-portfolio25.web.app/)
+---
 
-🧠 Showcasing hands-on projects in EC2, S3, CloudFront, and full-stack Servless & IAC automation with AWS services.
+## 🏗️ Featured Infrastructure Project
 
-<br/>
+### Auto-Healing Cloud Infrastructure using ALB & ASG
 
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+**Problem**  
+Single EC2 deployments create a single point of failure and downtime.
 
-## ☁️ AWS & Cloud Technologies
+**Architecture**
+- Custom VPC
+- Public subnets across multiple Availability Zones
+- Application Load Balancer
+- Target Group with application-level health checks
+- Auto Scaling Group with Launch Template
+- EC2 instances running a Dockerized application
 
-<p align="center">
-  <img src="https://cdn.worldvectorlogo.com/logos/amazon-web-services-2.svg" alt="AWS" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://vstecsku.com.my/wp-content/uploads/2024/12/amazon-ec2.jpeg" alt="EC2" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/amazon-s3-simple-storage-service.svg" alt="S3" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/aws-cloudfront.svg" alt="CloudFront" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg" alt="Lambda" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/aws-api-gateway.svg" alt="API Gateway" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png" alt="DynamoDB" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/aws-cloudformation.svg" alt="CloudFormation" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/aws-iam.svg" alt="IAM" width="50" height="50" />
-</p>
+![Architecture Diagram](docs/architecture.png)
 
-<br/>
+---
 
-## 💻 Development Stack
+### Failure Scenarios Tested
 
-<p align="center">
-  <img src="https://cdn.worldvectorlogo.com/logos/flutter.svg" alt="Flutter" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/dart.svg" alt="Dart" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" alt="Firebase" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://miro.medium.com/v2/resize:fit:1200/0*yWtsGXIMrkUu1OCq.jpg" alt="REST API" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF1HctiRAMzzzwozHLo0YxPfZF1vQrjvcWeg&s" alt="GitHub" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="Postman" width="50" height="50" />
-</p>
+- EC2 instance termination → ASG launched replacement automatically  
+- Docker container stopped → Target Group marked instance unhealthy  
+- ALB stopped routing traffic to unhealthy instance  
+- New instance bootstrapped via User Data  
+- Application became healthy and resumed traffic  
 
-<br/>
+**Result:** No user-visible downtime.
 
-## 🤖 AI & Automation Stack
+---
 
-<p align="center">
-  <img src="https://n8n.io/brandguidelines/dont/vertical-align.png" alt="n8n" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" alt="Notion AI" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://static.vecteezy.com/system/resources/previews/055/687/055/non_2x/rectangle-gemini-google-icon-symbol-logo-free-png.png" alt="Gemini API" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://ik.imagekit.io/tp/20240806-groq-logo.png" alt="Groq API" width="50" height="50" style="border-radius:8px;" />
-</p>
+### What This Project Demonstrates
 
-<br/>
+- Load balancing and health check behavior
+- Auto Scaling replacement mechanics
+- Fault-tolerant infrastructure design
+- AWS networking fundamentals
+- Production-style deployment mindset
 
-## ⚙️ Server, Networking & DevOps Tools
+---
 
-<p align="center">
-  <img src="https://cdn.worldvectorlogo.com/logos/linux-tux.svg" alt="Linux" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" alt="Ubuntu" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.worldvectorlogo.com/logos/nginx-1.svg" alt="Nginx" width="50" height="50" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYcwlxQLTZGdt6JztjOSUkB7u1bNJThO476Q&s" alt="DuckDNS" width="50" height="50" style="border-radius:8px;" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUxw0lEx2rySA8GbZccar1BEYOAhOyb8aT9g&s" alt="Networking" width="50" height="50" />
-</p>
+## ☁️ Core Technical Stack
 
-<br/>
+### AWS & Cloud
+- EC2
+- Application Load Balancer (ALB)
+- Auto Scaling Groups (ASG)
+- Target Groups & Health Checks
+- VPC, Subnets, Route Tables, IGW
+- Security Groups
 
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+### Containers & OS
+- Docker
+- Linux (Ubuntu)
+- Nginx
 
-## 🧩 Projects & Work
+### Infrastructure & Ops
+- User Data bootstrapping
+- Basic CloudFormation
+- CI/CD fundamentals
+- Cost-aware Free Tier testing
 
-☁️ **AWS Deployments:** EC2-hosted apps with Nginx, S3 static hosting, CloudFront distribution, and SSL setup.
+---
 
-⚙️ **Automation:** Cloud workflows using Lambda + API Gateway + DynamoDB + CloudFormation.
+## 🔐 IAM Awareness
 
-📱 **Flutter Apps:** 15+ production-ready apps integrated with REST APIs and Firebase.
+- IAM Roles for EC2
+- Least-privilege access usage
+- No hardcoded credentials
+- Clear separation of compute and permissions
 
-🔗 **Custom Cloud Integrations:** Chatbots and data pipelines using n8n, Notion AI, and Gemini API.
+---
 
-<br/>
+## 📁 Portfolio
 
-## 📫 Connect with Me
+🌐 **Cloud Portfolio:**  
+https://harikrish-portfolio25.web.app/
 
-<p align="center">
-  <a href="https://harikrish-portfolio.web.app" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" height="35"/>
-  </a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://linkedin.com/in/hari-krish-13300b27a" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="35"/>
-  </a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/Harikrishna2525" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" height="35"/>
-  </a>
-</p>
+Includes:
+- EC2 + Nginx deployments
+- S3 static hosting
+- CloudFront distributions
+- SSL-enabled architectures
+- Infrastructure-focused demos
 
-<br/>
+---
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
-</div>
+## 🚀 Target Roles
 
-<br/>
+- Cloud Engineer (L1–L2)
+- Infrastructure Engineer (Junior–Mid)
+- Platform / Infra roles in startups or product teams
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Building+Cloud+%2B+App+Solutions+with+AWS+%26+Flutter;Automating+Everything+Possible+%F0%9F%9A%80;Let's+Build+Something+Amazing+Together!" alt="Footer Typing SVG" />
-</p>
+---
 
-<div align="center">
-  
-![Profile Views](https://komarev.com/ghpvc/?username=Harikrishna2525&color=blueviolet&style=for-the-badge)
+## 📫 Connect
 
-</div>
+- 🌐 Portfolio: https://harikrish-portfolio25.web.app  
+- 💼 LinkedIn: https://linkedin.com/in/hari-krish-13300b27a  
+- 🧑‍💻 GitHub: https://github.com/Harikrishna2525  
+
+---
