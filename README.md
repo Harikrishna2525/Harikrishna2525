@@ -134,7 +134,7 @@ push main → docker build → push ghcr.io → SSH EC2 → docker pull & run �
 
 ## 🎯 Open To
 
-- 🔵 **Cloud Engineer** — L1–L2, AWS-native infra, compute & networking focus
+- 🔵 **Cloud Engineer** — AWS-native infra, compute & networking focus
 - 🟢 **DevOps Engineer (Infra Heavy)** — CI/CD, containers, IaC, system reliability
 - 🟣 **Junior Platform Engineer** — Internal tooling, EC2 + serverless hybrid, product startups
 
