@@ -1,224 +1,159 @@
-☁️ Hari Krishna — AWS Cloud Infrastructure & Automation Engineer
-<div align="center"> <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=600&size=30&pause=900&color=36BCF7&center=true&vCenter=true&width=700&lines=AWS+Cloud+Infrastructure+Engineer;Automation+%7C+Containers+%7C+CI%2FCD;Failure-Tested+Systems" /> </div>
+# ☁️ Hari Krishna — Cloud / Infrastructure Engineer
 
-Designing reliable, fault-tolerant AWS infrastructure with automation, containerized deployments, CI/CD pipelines, and production-style monitoring.
+<div align="center">
 
-🎯 Role Definition
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=600&size=30&pause=900&color=36BCF7&center=true&vCenter=true&width=700&lines=Cloud+%2F+Infrastructure+Engineer;Auto-Healing+AWS+Architectures;Failure-Tested+Systems" />
 
-Primary Role:
-AWS Cloud Infrastructure & Automation Engineer
+</div>
 
-Responsibilities:
+Designing reliable, fault-tolerant AWS infrastructure with real failure testing and production-style deployment practices.
 
-Design and deploy AWS infrastructure for scalable web applications
+---
 
-Build fault-tolerant and auto-healing systems using load balancing and Auto Scaling
+## 🎯 Role Definition
 
-Automate infrastructure provisioning using Infrastructure as Code
+**Primary Role:**  
+**Cloud / Infrastructure Engineer (L1–L2)**
 
-Containerize applications using Docker
+**Responsibilities:**
+- Design and deploy AWS infrastructure for web applications
+- Build fault-tolerant and auto-healing systems
+- Configure load balancing, health checks, and traffic routing
+- Manage EC2-based and serverless workloads
+- Debug infrastructure-level issues (networking, compute, service health)
+- Automate deployments and bootstrapping using User Data and IaC
+- Monitor systems using logs, metrics, and alarms
 
-Build CI/CD pipelines for automated container delivery
+---
 
-Manage EC2-based and serverless workloads
+## 🧑‍💻 About Me
 
-Debug infrastructure-level issues (networking, compute, service health)
-
-Monitor systems using logs, metrics, and health checks
-
-🧑‍💻 About Me
-
-I’m a hands-on Cloud Infrastructure Engineer focused on how systems fail, recover, and scale, not just how they are deployed.
-
-My work focuses on building AWS environments that are automated, resilient, and observable.
+I’m a hands-on Cloud / Infrastructure Engineer focused on how systems **fail, recover, and scale**, not just how they are deployed.
 
 I work with:
+- Failure-first infrastructure design
+- Real testing of unhealthy scenarios
+- EC2 and serverless-based architectures
+- AWS-native monitoring and logging
+- Simple, explainable designs suitable for production
 
-Fault-tolerant infrastructure design
+Flutter experience exists, but cloud infrastructure is my primary career focus.
 
-Real testing of unhealthy scenarios
+---
 
-EC2 and serverless-based architectures
+## 🏗️ Featured Infrastructure Project
 
-Containerized application deployments
+### Auto-Healing Cloud Infrastructure using ALB & ASG
 
-CI/CD pipelines for automated delivery
-
-AWS-native monitoring and logging
-
-Background in Flutter and backend development, which helps me understand both application behavior and the infrastructure that supports it.
-
-🏗️ Featured Infrastructure Project
-Auto-Healing Cloud Infrastructure using ALB & ASG
-
-Problem
+**Problem**  
 Single EC2 deployments create a single point of failure and downtime.
 
-Architecture
+**Architecture**
+- Custom VPC
+- Public subnets across multiple Availability Zones
+- Application Load Balancer
+- Target Group with application-level health checks
+- Auto Scaling Group with Launch Template
+- EC2 instances running a Dockerized application
+- CloudWatch for health metrics and monitoring
 
-Custom VPC
+![Architecture Diagram](https://github.com/Harikrishna2525/Aws-ALB-ASG-auto-healing/blob/master/docs/architecture.png)
 
-Public subnets across multiple Availability Zones
+---
 
-Application Load Balancer
+### Failure Scenarios Tested
 
-Target Group with application-level health checks
+- EC2 instance termination → ASG launched replacement automatically  
+- Docker container stopped → Target Group marked instance unhealthy  
+- ALB stopped routing traffic to unhealthy instance  
+- New instance bootstrapped via User Data  
+- Application became healthy and resumed traffic  
 
-Auto Scaling Group with Launch Template
+**Result:** No user-visible downtime.
 
-EC2 instances running a Dockerized application
+---
 
-CloudWatch for health metrics and monitoring
+### What This Project Demonstrates
 
-Deployment Workflow
+- Load balancing and health check behavior
+- Auto Scaling replacement mechanics
+- CloudWatch-based monitoring awareness
+- Fault-tolerant infrastructure design
+- AWS networking fundamentals
+- Production-style deployment mindset
 
-GitHub → GitHub Actions CI/CD Pipeline → Docker Image Build
-→ Push Image to GitHub Container Registry (GHCR)
-→ EC2 Instances pull container during boot using User Data
-→ Application container starts automatically
-→ Instances register with ALB Target Group
-→ Auto Scaling maintains healthy capacity
+---
 
-Infrastructure provisioning handled using CloudFormation and Launch Templates.
+## ☁️ Core Technical Stack
 
-Failure Scenarios Tested
+### Compute & Networking
+- EC2
+- Application Load Balancer (ALB)
+- Auto Scaling Groups (ASG)
+- Target Groups & Health Checks
+- VPC, Subnets, Route Tables, Internet Gateway
+- Security Groups
 
-EC2 instance termination → ASG launched replacement automatically
+### Serverless & Backend Services
+- AWS Lambda
+- API Gateway (REST APIs)
+- DynamoDB (NoSQL data storage)
 
-Docker container stopped → Target Group marked instance unhealthy
+### Storage & CDN
+- Amazon S3 (static hosting, object storage)
+- CloudFront (content delivery & caching)
 
-ALB stopped routing traffic to unhealthy instance
+### Containers & OS
+- Docker
+- Linux (Ubuntu)
+- Nginx (reverse proxy & server configuration)
 
-New instance bootstrapped via User Data
+### Monitoring & Operations
+- Amazon CloudWatch (logs, metrics, alarms)
+- User Data bootstrapping
+- Basic CloudFormation
+- CI/CD fundamentals
+- Cost-aware Free Tier testing
 
-Application container pulled and started automatically
+---
 
-Traffic resumed once the instance became healthy.
+## 🔐 IAM Awareness
 
-What This Project Demonstrates
+- IAM Roles for EC2 and Lambda
+- Least-privilege access patterns
+- Service-to-service authentication
+- Avoiding hardcoded credentials
 
-Load balancing and health check behavior
+---
 
-Auto Scaling replacement mechanics
+## 📁 Portfolio
 
-Infrastructure bootstrapping using User Data
-
-Containerized application deployment
-
-CI/CD-based container delivery
-
-CloudWatch monitoring awareness
-
-Fault-tolerant infrastructure design
-
-AWS networking fundamentals
-
-☁️ Core Technical Stack
-Cloud Infrastructure
-
-AWS EC2
-
-Application Load Balancer (ALB)
-
-Auto Scaling Groups (ASG)
-
-Target Groups & Health Checks
-
-VPC, Subnets, Route Tables, Internet Gateway
-
-Security Groups
-
-Containers
-
-Docker
-
-Containerized application deployment
-
-GitHub Container Registry (GHCR)
-
-Infrastructure as Code
-
-AWS CloudFormation
-
-Launch Templates
-
-User Data bootstrapping
-
-Infrastructure automation
-
-CI/CD & Delivery
-
-GitHub Actions
-
-Docker image build pipelines
-
-Automated container publishing to GHCR
-
-Automated deployment workflows
-
-Serverless & Backend Services
-
-AWS Lambda
-
-API Gateway (REST APIs)
-
-DynamoDB (NoSQL data storage)
-
-Storage & CDN
-
-Amazon S3 (static hosting, object storage)
-
-CloudFront (content delivery & caching)
-
-Containers & OS
-
-Linux (Ubuntu)
-
-Nginx (reverse proxy & server configuration)
-
-Monitoring & Operations
-
-Amazon CloudWatch (logs, metrics, alarms)
-
-Infrastructure health monitoring
-
-Application health checks
-
-Cost-aware Free Tier testing
-
-🔐 IAM Awareness
-
-IAM Roles for EC2 and Lambda
-
-Least-privilege access patterns
-
-Service-to-service authentication
-
-Avoiding hardcoded credentials
-
-📁 Portfolio
-
-🌐 Cloud Portfolio:
+🌐 **Cloud Portfolio:**  
 https://harikrish-portfolio25.web.app/
 
 Includes:
+- EC2 + Nginx deployments
+- Auto-healing infrastructure demos
+- S3 static hosting + CloudFront
+- Serverless APIs using Lambda & API Gateway
+- DynamoDB-backed workflows
+- SSL-enabled architectures
 
-EC2 + Nginx deployments
+---
 
-Auto-healing infrastructure demos
+## 🚀 Target Roles
 
-S3 static hosting + CloudFront
+- Cloud Engineer (L1–L2)
+- Infrastructure Engineer (Junior–Mid)
+- Platform / Infra roles in startups or product teams
+- Teams using EC2 + Serverless hybrid architectures
 
-Serverless APIs using Lambda & API Gateway
+---
 
-DynamoDB-backed workflows
+## 📫 Connect
 
-SSL-enabled architectures
+- 🌐 Portfolio: https://harikrish-portfolio25.web.app  
+- 💼 LinkedIn: https://linkedin.com/in/hari-krish-13300b27a  
+- 🧑‍💻 GitHub: https://github.com/Harikrishna2525  
 
-📫 Connect
-
-🌐 Portfolio: https://harikrish-portfolio25.web.app
-
-💼 LinkedIn: https://linkedin.com/in/hari-krish-13300b27a
-
-🧑‍💻 GitHub: https://github.com/Harikrishna2525
+---
