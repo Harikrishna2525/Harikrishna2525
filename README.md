@@ -1,159 +1,157 @@
-# ☁️ Hari Krishna — Cloud / Infrastructure Engineer
-
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=600&size=30&pause=900&color=36BCF7&center=true&vCenter=true&width=700&lines=Cloud+%2F+Infrastructure+Engineer;Auto-Healing+AWS+Architectures;Failure-Tested+Systems" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=180&section=header&text=Hari%20Krishna&fontSize=52&fontColor=fff&fontAlignY=36&desc=Cloud%20%2F%20DevOps%20Engineer%20%E2%80%94%20Infra%20Heavy&descAlignY=58&descSize=17&descColor=a5f3fc"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=Failure-first+infrastructure+design;Auto-healing+AWS+%7C+Zero-downtime+deployments;git+push+%E2%86%92+CI+%E2%86%92+Docker+%E2%86%92+GHCR+%E2%86%92+CloudFormation;Infra-First.+Failure-Tested.+Production-Ready."/>
+
+<br/>
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-harikrish--portfolio25.web.app-22d3ee?style=for-the-badge&logo=googlechrome&logoColor=white)](https://harikrish-portfolio25.web.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/hari-krish-13300b27a)
+[![GitHub](https://img.shields.io/badge/GitHub-Harikrishna2525-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Harikrishna2525)
 
 </div>
 
-Designing reliable, fault-tolerant AWS infrastructure with real failure testing and production-style deployment practices.
+---
+
+## Role
+
+**Cloud / DevOps Engineer — Infra Heavy**
+
+I design and operate AWS infrastructure focused on how systems **fail, recover, and scale** — not just how they deploy. Built for Indian product startups and remote-first teams that need solid infra without enterprise overhead.
 
 ---
 
-## 🎯 Role Definition
+## 01 — Featured Project
 
-**Primary Role:**  
-**Cloud / Infrastructure Engineer (L1–L2)**
+### Auto-Healing Cloud Infrastructure
 
-**Responsibilities:**
-- Design and deploy AWS infrastructure for web applications
-- Build fault-tolerant and auto-healing systems
-- Configure load balancing, health checks, and traffic routing
-- Manage EC2-based and serverless workloads
-- Debug infrastructure-level issues (networking, compute, service health)
-- Automate deployments and bootstrapping using User Data and IaC
-- Monitor systems using logs, metrics, and alarms
+> ALB · ASG · Docker · GitHub Actions · GHCR · CloudFormation
 
----
+**Problem:** Single EC2 instances fail. Manual deploys bottleneck teams.
 
-## 🧑‍💻 About Me
+**Solution:** Fully automated, self-healing AWS stack — zero manual steps, zero downtime.
 
-I’m a hands-on Cloud / Infrastructure Engineer focused on how systems **fail, recover, and scale**, not just how they are deployed.
-
-I work with:
-- Failure-first infrastructure design
-- Real testing of unhealthy scenarios
-- EC2 and serverless-based architectures
-- AWS-native monitoring and logging
-- Simple, explainable designs suitable for production
-
-Flutter experience exists, but cloud infrastructure is my primary career focus.
-
----
-
-## 🏗️ Featured Infrastructure Project
-
-### Auto-Healing Cloud Infrastructure using ALB & ASG
-
-**Problem**  
-Single EC2 deployments create a single point of failure and downtime.
-
-**Architecture**
-- Custom VPC
-- Public subnets across multiple Availability Zones
-- Application Load Balancer
-- Target Group with application-level health checks
-- Auto Scaling Group with Launch Template
-- EC2 instances running a Dockerized application
-- CloudWatch for health metrics and monitoring
-
-![Architecture Diagram](https://github.com/Harikrishna2525/Aws-ALB-ASG-auto-healing/blob/master/docs/architecture.png)
-
----
+```
+git push
+  └─▶  GitHub Actions CI/CD
+         ├─▶  Docker Build + Tag (SHA + latest)
+         ├─▶  Push → GHCR  (ghcr.io/harikrishna2525/app)
+         └─▶  CloudFormation Stack Update
+                    │
+         ┌──────────▼──────────┐
+         │  Application Load    │
+         │     Balancer         │
+         └────┬─────────┬──────┘
+              │         │
+         EC2 AZ-1   EC2 AZ-2     ← Auto Scaling Group
+         [Docker]   [Docker]
+              │         │
+         Target Group + Health Checks
+                    │
+           CloudWatch Alarms + Logs
+```
 
 ### Failure Scenarios Tested
 
-- EC2 instance termination → ASG launched replacement automatically  
-- Docker container stopped → Target Group marked instance unhealthy  
-- ALB stopped routing traffic to unhealthy instance  
-- New instance bootstrapped via User Data  
-- Application became healthy and resumed traffic  
-
-**Result:** No user-visible downtime.
-
----
-
-### What This Project Demonstrates
-
-- Load balancing and health check behavior
-- Auto Scaling replacement mechanics
-- CloudWatch-based monitoring awareness
-- Fault-tolerant infrastructure design
-- AWS networking fundamentals
-- Production-style deployment mindset
+| Scenario | Recovery | Outcome |
+|---|---|---|
+| EC2 terminated | ASG launched replacement automatically | Zero downtime |
+| Docker container stopped | Target Group marked unhealthy, traffic rerouted | Zero downtime |
+| Health check failed | ALB drained and stopped routing | Zero downtime |
+| Bad commit pushed | CI blocked deploy, infra unchanged | Protected |
+| New instance boot | User Data pulled image from GHCR, app started | Auto-healed |
 
 ---
 
-## ☁️ Core Technical Stack
+## 02 — CI/CD Pipeline
 
-### Compute & Networking
-- EC2
-- Application Load Balancer (ALB)
-- Auto Scaling Groups (ASG)
-- Target Groups & Health Checks
-- VPC, Subnets, Route Tables, Internet Gateway
-- Security Groups
+```yaml
+# .github/workflows/deploy.yml
 
-### Serverless & Backend Services
-- AWS Lambda
-- API Gateway (REST APIs)
-- DynamoDB (NoSQL data storage)
+on: [push to main]
 
-### Storage & CDN
-- Amazon S3 (static hosting, object storage)
-- CloudFront (content delivery & caching)
+jobs:
+  build-and-push:
+    - Checkout code
+    - Login to GHCR via GitHub Actions OIDC   # no long-lived secrets
+    - Build Docker image
+    - Tag with commit SHA + latest
+    - Push → ghcr.io/harikrishna2525/app
 
-### Containers & OS
-- Docker
-- Linux (Ubuntu)
-- Nginx (reverse proxy & server configuration)
+  deploy:
+    - Trigger CloudFormation stack update
+    - ASG instances pull new image on refresh
+    - Health checks validate rollout
+    - Auto-rollback on failure
+```
 
-### Monitoring & Operations
-- Amazon CloudWatch (logs, metrics, alarms)
-- User Data bootstrapping
-- Basic CloudFormation
-- CI/CD fundamentals
-- Cost-aware Free Tier testing
+**Toolchain:** GitHub Actions · Docker · GHCR · CloudFormation · AWS CLI
 
 ---
 
-## 🔐 IAM Awareness
+## 03 — Technical Stack
 
-- IAM Roles for EC2 and Lambda
-- Least-privilege access patterns
-- Service-to-service authentication
-- Avoiding hardcoded credentials
+### Infrastructure & IaC
+![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![ALB](https://img.shields.io/badge/ALB-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![ASG](https://img.shields.io/badge/ASG-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![VPC](https://img.shields.io/badge/VPC-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![CloudFormation](https://img.shields.io/badge/CloudFormation-FF4500?style=flat-square&logo=amazonaws&logoColor=white)
 
----
+### CI/CD & Containers
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GHCR](https://img.shields.io/badge/GHCR-181717?style=flat-square&logo=github&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-E95420?style=flat-square&logo=ubuntu&logoColor=white)
 
-## 📁 Portfolio
+### Serverless & Storage
+![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
+![API Gateway](https://img.shields.io/badge/API_Gateway-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
+![S3](https://img.shields.io/badge/S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
+![CloudFront](https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws&logoColor=white)
 
-🌐 **Cloud Portfolio:**  
-https://harikrish-portfolio25.web.app/
-
-Includes:
-- EC2 + Nginx deployments
-- Auto-healing infrastructure demos
-- S3 static hosting + CloudFront
-- Serverless APIs using Lambda & API Gateway
-- DynamoDB-backed workflows
-- SSL-enabled architectures
-
----
-
-## 🚀 Target Roles
-
-- Cloud Engineer (L1–L2)
-- Infrastructure Engineer (Junior–Mid)
-- Platform / Infra roles in startups or product teams
-- Teams using EC2 + Serverless hybrid architectures
+### Monitoring & Security
+![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4500?style=flat-square&logo=amazonaws&logoColor=white)
+![IAM](https://img.shields.io/badge/IAM-DD344C?style=flat-square&logo=amazonaws&logoColor=white)
 
 ---
 
-## 📫 Connect
+## 04 — Security Practices
 
-- 🌐 Portfolio: https://harikrish-portfolio25.web.app  
-- 💼 LinkedIn: https://linkedin.com/in/hari-krish-13300b27a  
-- 🧑‍💻 GitHub: https://github.com/Harikrishna2525  
+- IAM Roles scoped per service — EC2, Lambda — no shared credentials
+- Least-privilege policies across all resources
+- GHCR auth via GitHub Actions OIDC — no long-lived secrets stored
+- Security Groups: ingress restricted by port and source
+- No hardcoded credentials — env variables or Secrets Manager
+- CloudFormation drift detection enabled
 
 ---
+
+## 05 — Open To
+
+Targeting **Indian product startups** and **remote-first engineering teams.**
+
+| Role | Type | Focus |
+|---|---|---|
+| **Cloud Infrastructure Engineer** | Full-time / Contract | AWS, IaC, CloudFormation, Networking |
+| **DevOps Engineer — Infra Heavy** | Full-time / Remote | CI/CD, Docker, GHCR, Cloud Automation |
+| **Junior Platform Engineer** | Full-time | Platform Infra + Automation |
+
+---
+
+## 06 — Connect
+
+| | |
+|---|---|
+| Portfolio | [harikrish-portfolio25.web.app](https://harikrish-portfolio25.web.app) |
+| LinkedIn | [linkedin.com/in/hari-krish-13300b27a](https://linkedin.com/in/hari-krish-13300b27a) |
+| GitHub | [github.com/Harikrishna2525](https://github.com/Harikrishna2525) |
+
+---
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Infra-First%20%C2%B7%20Failure-Tested%20%C2%B7%20Production-Ready&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
+</div>
