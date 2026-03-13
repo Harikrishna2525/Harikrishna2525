@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=180&section=header&text=Hari%20Krishna&fontSize=52&fontColor=fff&fontAlignY=36&desc=Cloud%20%2F%20DevOps%20Engineer%20%E2%80%94%20Infra%20Heavy&descAlignY=58&descSize=17&descColor=a5f3fc"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=Failure-first+infrastructure+design;Auto-healing+AWS+%7C+Zero-downtime+deployments;git+push+%E2%86%92+CI+%E2%86%92+Docker+%E2%86%92+GHCR+%E2%86%92+CloudFormation;Infra-First.+Failure-Tested.+Production-Ready."/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=AWS+Infrastructure+%26+Reliability;Auto+Scaling+%2B+Load+Balanced+Architectures;git+push+%E2%86%92+CI+%E2%86%92+Docker+%E2%86%92+GHCR+%E2%86%92+CloudFormation;Infrastructure+Automation+%26+Monitoring"/>
 
 <br/>
 
@@ -16,9 +16,16 @@
 
 ## Role
 
-**Cloud / DevOps Engineer — Infra Heavy**
+**Cloud / DevOps Engineer — Infrastructure Focused**
 
-I design and operate AWS infrastructure focused on how systems **fail, recover, and scale** — not just how they deploy. Built for Indian product startups and remote-first teams that need solid infra without enterprise overhead.
+I design and operate AWS infrastructure focused on **reliability, automated deployments, and failure recovery**.
+
+My projects emphasize:
+
+- Load-balanced architectures
+- CI/CD automation
+- Infrastructure defined with CloudFormation
+- Observability using AWS-native monitoring
 
 ---
 
@@ -28,9 +35,15 @@ I design and operate AWS infrastructure focused on how systems **fail, recover, 
 
 > ALB · ASG · Docker · GitHub Actions · GHCR · CloudFormation
 
-**Problem:** Single EC2 instances fail. Manual deploys bottleneck teams.
+**Problem**
 
-**Solution:** Fully automated, self-healing AWS stack — zero manual steps, zero downtime.
+Applications running on a **single EC2 instance** become unavailable when the instance fails or the application crashes.
+
+Manual deployments also introduce risk and slow down release cycles.
+
+**Solution**
+
+An automated deployment pipeline using **GitHub Actions and CloudFormation**, combined with **Auto Scaling and load balancing** to replace failed instances and maintain service availability.
 
 ```
 git push
@@ -52,15 +65,17 @@ git push
            CloudWatch Alarms + Logs
 ```
 
+---
+
 ### Failure Scenarios Tested
 
 | Scenario | Recovery | Outcome |
 |---|---|---|
-| EC2 terminated | ASG launched replacement automatically | Zero downtime |
-| Docker container stopped | Target Group marked unhealthy, traffic rerouted | Zero downtime |
-| Health check failed | ALB drained and stopped routing | Zero downtime |
-| Bad commit pushed | CI blocked deploy, infra unchanged | Protected |
-| New instance boot | User Data pulled image from GHCR, app started | Auto-healed |
+| EC2 terminated | ASG launched replacement automatically | Service automatically restored |
+| Docker container stopped | Target Group marked unhealthy | Traffic routed to healthy instance |
+| Health check failed | ALB stopped routing traffic | Fault isolated |
+| Bad commit pushed | CI blocked deployment | Infrastructure unchanged |
+| New instance boot | User Data pulled image from GHCR | Instance joined load balancer |
 
 ---
 
@@ -74,16 +89,17 @@ on: [push to main]
 jobs:
   build-and-push:
     - Checkout code
-    - Login to GHCR via GitHub Actions OIDC   # no long-lived secrets
+    - Login to GHCR using GitHub Actions token
     - Build Docker image
     - Tag with commit SHA + latest
     - Push → ghcr.io/harikrishna2525/app
 
   deploy:
+    - Authenticate to AWS using GitHub OIDC
     - Trigger CloudFormation stack update
-    - ASG instances pull new image on refresh
-    - Health checks validate rollout
-    - Auto-rollback on failure
+    - ASG instances pull new image during refresh
+    - Health checks validate deployment
+    - Rollback if deployment fails
 ```
 
 **Toolchain:** GitHub Actions · Docker · GHCR · CloudFormation · AWS CLI
@@ -93,11 +109,11 @@ jobs:
 ## 03 — Technical Stack
 
 ### Infrastructure & IaC
+![CloudFormation](https://img.shields.io/badge/CloudFormation-FF4500?style=flat-square&logo=amazonaws&logoColor=white)
 ![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![ALB](https://img.shields.io/badge/ALB-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![ASG](https://img.shields.io/badge/ASG-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![VPC](https://img.shields.io/badge/VPC-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
-![CloudFormation](https://img.shields.io/badge/CloudFormation-FF4500?style=flat-square&logo=amazonaws&logoColor=white)
 
 ### CI/CD & Containers
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
@@ -121,24 +137,21 @@ jobs:
 
 ## 04 — Security Practices
 
-- IAM Roles scoped per service — EC2, Lambda — no shared credentials
-- Least-privilege policies across all resources
-- GHCR auth via GitHub Actions OIDC — no long-lived secrets stored
-- Security Groups: ingress restricted by port and source
-- No hardcoded credentials — env variables or Secrets Manager
-- CloudFormation drift detection enabled
+- IAM Roles scoped per service (EC2, Lambda)
+- Least-privilege policies applied to infrastructure
+- AWS authentication in CI using **GitHub Actions OIDC**
+- Security Groups with restricted ingress rules
+- No hardcoded credentials — environment variables or AWS Secrets Manager
 
 ---
 
 ## 05 — Open To
 
-Targeting **Indian product startups** and **remote-first engineering teams.**
-
 | Role | Type | Focus |
 |---|---|---|
-| **Cloud Infrastructure Engineer** | Full-time / Contract | AWS, IaC, CloudFormation, Networking |
-| **DevOps Engineer — Infra Heavy** | Full-time / Remote | CI/CD, Docker, GHCR, Cloud Automation |
-| **Junior Platform Engineer** | Full-time | Platform Infra + Automation |
+| **Cloud Infrastructure Engineer** | Full-time / Contract | AWS, IaC, Networking |
+| **DevOps Engineer — Infra Heavy** | Full-time / Remote | CI/CD, Docker, Cloud Automation |
+| **Junior Platform Engineer** | Full-time | Platform Infrastructure |
 
 ---
 
@@ -153,5 +166,5 @@ Targeting **Indian product startups** and **remote-first engineering teams.**
 ---
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Infra-First%20%C2%B7%20Failure-Tested%20%C2%B7%20Production-Ready&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Infrastructure%20Automation%20%C2%B7%20AWS%20Reliability%20%C2%B7%20Cloud%20Engineering&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
 </div>
