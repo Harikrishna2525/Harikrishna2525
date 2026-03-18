@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=180&section=header&text=Hari%20Krishna&fontSize=52&fontColor=fff&fontAlignY=36&desc=Cloud%20%2F%20DevOps%20Engineer%20%E2%80%94%20Infra%20Heavy&descAlignY=58&descSize=17&descColor=a5f3fc"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=180&section=header&text=Hari%20Krishna&fontSize=52&fontColor=fff&fontAlignY=36&desc=AWS%20DevOps%20Engineer&descAlignY=58&descSize=17&descColor=a5f3fc"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=AWS+Infrastructure+%26+Reliability;Auto+Scaling+%2B+Load+Balanced+Architectures;git+push+%E2%86%92+CI+%E2%86%92+Docker+%E2%86%92+GHCR+%E2%86%92+CloudFormation;Infrastructure+Automation+%26+Monitoring"/>
 
@@ -16,9 +16,9 @@
 
 ## Role
 
-**Cloud / DevOps Engineer — Infrastructure Focused**
+**AWS DevOps Engineer — Infrastructure & Automation**
 
-I design and operate AWS infrastructure focused on **reliability, automated deployments, and failure recovery**.
+I build, deploy, and automate applications on AWS using CI/CD pipelines, Docker, and infrastructure as code, with a focus on reliability, scalability, and failure recovery.
 
 My projects emphasize:
 
@@ -31,7 +31,7 @@ My projects emphasize:
 
 ## 01 — Featured Project
 
-### Auto-Healing Cloud Infrastructure
+### Auto-Healing Deployment Infrastructure on AWS
 
 > ALB · ASG · Docker · GitHub Actions · GHCR · CloudFormation
 
@@ -44,6 +44,8 @@ Manual deployments also introduce risk and slow down release cycles.
 **Solution**
 
 An automated deployment pipeline using **GitHub Actions and CloudFormation**, combined with **Auto Scaling and load balancing** to replace failed instances and maintain service availability.
+
+Fully automated deployment pipeline from code push to production using Docker and GitHub Actions.
 
 ```
 git push
@@ -149,8 +151,8 @@ jobs:
 
 | Role | Type | Focus |
 |---|---|---|
-| **Cloud Infrastructure Engineer** | Full-time / Contract | AWS, IaC, Networking |
-| **DevOps Engineer — Infra Heavy** | Full-time / Remote | CI/CD, Docker, Cloud Automation |
+| **AWS DevOps Engineer** | Full-time / Remote | CI/CD, Docker, Cloud Automation |
+| **DevOps Engineer — Infra Heavy** | Full-time | AWS, IaC, Scalable Systems |
 | **Junior Platform Engineer** | Full-time | Platform Infrastructure |
 
 ---
@@ -166,5 +168,5 @@ jobs:
 ---
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Infrastructure%20Automation%20%C2%B7%20AWS%20Reliability%20%C2%B7%20Cloud%20Engineering&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Build%20%C2%B7%20Deploy%20%C2%B7%20Scale%20%C2%B7%20Monitor&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
 </div>
