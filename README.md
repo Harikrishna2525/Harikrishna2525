@@ -1,168 +1,188 @@
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=180&section=header&text=Hari%20Krishna&fontSize=52&fontColor=fff&fontAlignY=36&desc=AWS%20Cloud%20DevOps%20Engineer&descAlignY=58&descSize=17&descColor=a5f3fc"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=AWS+Infrastructure+%26+Reliability;Auto+Scaling+%2B+Load+Balanced+Architectures;Terraform+%E2%86%92+AWS+Infrastructure+%E2%86%92+Docker+%E2%86%92+CI%2FCD;Infrastructure+Automation+%26+Monitoring"/>
+
+<br/>
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-harikrish--portfolio25.web.app-22d3ee?style=for-the-badge&logo=googlechrome&logoColor=white)](https://harikrish-portfolio25.web.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/hari-krish-13300b27a)
+[![GitHub](https://img.shields.io/badge/GitHub-Harikrishna2525-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Harikrishna2525)
+
+</div>
+
+---
+
 ## Role
 
 **AWS Cloud & DevOps Engineer — Infrastructure, Automation & Reliability**
 
-I design, deploy, and automate cloud infrastructure on AWS using Terraform, Docker, and CI/CD pipelines. My focus is on building scalable, highly available systems with Infrastructure as Code, monitoring, and automated recovery mechanisms.
+I build, deploy, and automate applications on AWS using CI/CD pipelines, Docker, and infrastructure as code, with a focus on reliability, scalability, and failure recovery.
 
 My projects emphasize:
 
-* AWS Infrastructure Design
-* Infrastructure as Code with Terraform
-* High Availability Architectures
-* Docker-based Deployments
-* CI/CD Automation
-* Monitoring & Observability
-* Production Troubleshooting
+- Load-balanced architectures
+- CI/CD automation
+- Infrastructure defined using Terraform and Infrastructure as Code principles
+- Observability using AWS-native monitoring
 
 ---
 
 ## 01 — Featured Project
 
-### Auto-Healing Infrastructure on AWS
+### Auto-Healing Deployment Infrastructure on AWS
 
-> Terraform · ALB · ASG · EC2 · CloudWatch · Docker · GitHub Actions
+> Terraform · ALB · ASG · Docker · GitHub Actions · GHCR · CloudWatch
 
 **Problem**
 
-Applications deployed on a single EC2 instance become unavailable when infrastructure or application failures occur.
+Applications running on a **single EC2 instance** become unavailable when the instance fails or the application crashes.
 
-Manual deployments increase operational risk and reduce reliability.
+Manual deployments also introduce risk and slow down release cycles.
 
 **Solution**
 
-Designed a highly available AWS architecture using Application Load Balancer, Auto Scaling Groups, health checks, and automated recovery mechanisms.
+An automated deployment pipeline using **GitHub Actions and Terraform**, combined with **Auto Scaling and load balancing** to replace failed instances and maintain service availability.
 
-Integrated deployment automation using Docker and GitHub Actions while maintaining infrastructure through Terraform.
+Fully automated deployment pipeline from code push to production using Docker and GitHub Actions.
 
-```text
-Developer
-    │
+```
 git push
-    │
-    ▼
-GitHub Actions
-    │
-Docker Build
-    │
-Push to GHCR
-    │
-Deploy to EC2
-    │
-──────── AWS ────────
-
-        ALB
-         │
-   ┌─────┴─────┐
-   │           │
- EC2-1      EC2-2
- Docker     Docker
-   │           │
-   └─────┬─────┘
-         │
-     Auto Scaling
-         │
- CloudWatch Monitoring
+  └─▶  GitHub Actions CI/CD
+         ├─▶  Docker Build + Tag (SHA + latest)
+         ├─▶  Push → GHCR  (ghcr.io/harikrishna2525/app)
+         └─▶  Terraform Infrastructure Deployment
+                    │
+         ┌──────────▼──────────┐
+         │  Application Load    │
+         │     Balancer         │
+         └────┬─────────┬──────┘
+              │         │
+         EC2 AZ-1   EC2 AZ-2     ← Auto Scaling Group
+         [Docker]   [Docker]
+              │         │
+         Target Group + Health Checks
+                    │
+           CloudWatch Alarms + Logs
 ```
 
 ---
 
 ### Failure Scenarios Tested
 
-| Scenario             | Recovery                                   |
-| -------------------- | ------------------------------------------ |
-| EC2 Failure          | Auto Scaling launched replacement instance |
-| Application Crash    | Health checks isolated unhealthy instance  |
-| Deployment Failure   | Pipeline stopped release                   |
-| Instance Replacement | User Data automated application startup    |
-| Health Check Failure | ALB redirected traffic to healthy targets  |
+| Scenario | Recovery | Outcome |
+|---|---|---|
+| EC2 terminated | ASG launched replacement automatically | Service automatically restored |
+| Docker container stopped | Target Group marked unhealthy | Traffic routed to healthy instance |
+| Health check failed | ALB stopped routing traffic | Fault isolated |
+| Bad commit pushed | CI blocked deployment | Infrastructure unchanged |
+| New instance boot | User Data pulled image from GHCR | Instance joined load balancer |
 
 ---
 
-## 02 — Infrastructure & Automation
+## 02 — CI/CD Pipeline
 
-### Terraform Infrastructure
+```yaml
+# .github/workflows/deploy.yml
 
-* Provisioned AWS infrastructure using Terraform
-* Managed VPC, EC2, IAM, S3, CloudFront, ALB, and ASG
-* Implemented remote state management using S3 and DynamoDB locking
-* Built repeatable and scalable infrastructure deployments
+on: [push to main]
 
-### CI/CD Automation
+jobs:
+  build-and-push:
+    - Checkout code
+    - Login to GHCR using GitHub Actions token
+    - Build Docker image
+    - Tag with commit SHA + latest
+    - Push → ghcr.io/harikrishna2525/app
 
-* Automated build and deployment workflows using GitHub Actions
-* Built and versioned Docker images
-* Published images to GHCR
-* Automated deployments on AWS EC2
-* Troubleshot deployment and container failures
+  deploy:
+    - Authenticate to AWS using GitHub OIDC
+    - Trigger Terraform infrastructure deployment
+    - ASG instances pull new image during refresh
+    - Health checks validate deployment
+    - Rollback if deployment fails
+```
+
+**Toolchain:** GitHub Actions · Docker · GHCR · Terraform · AWS CLI
+
+
+## Terraform AWS Infrastructure
+
+Terraform-based AWS infrastructure including:
+
+- VPC & Networking
+- ALB & Auto Scaling
+- EC2 Compute
+- CloudFront Delivery
+- IAM & Security
+- Remote State (S3 + DynamoDB)
+
 
 ---
 
 ## 03 — Technical Stack
 
-### Cloud Infrastructure
+###### Infrastructure & IaC
 
-* AWS EC2
-* VPC
-* IAM
-* S3
-* CloudFront
-* ALB
-* Auto Scaling Groups
-* CloudWatch
+![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform\&logoColor=white)
+![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
+![VPC](https://img.shields.io/badge/VPC-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
+![ALB](https://img.shields.io/badge/ALB-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
+![ASG](https://img.shields.io/badge/ASG-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
+![CloudFront](https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws\&logoColor=white)
 
-### Infrastructure as Code
 
-* Terraform
-* Remote State Management
-* DynamoDB Locking
+### CI/CD & Containers
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GHCR](https://img.shields.io/badge/GHCR-181717?style=flat-square&logo=github&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-E95420?style=flat-square&logo=ubuntu&logoColor=white)
 
-### Containers & Automation
+### Serverless & Storage
+![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
+![API Gateway](https://img.shields.io/badge/API_Gateway-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
+![S3](https://img.shields.io/badge/S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
+![CloudFront](https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws&logoColor=white)
 
-* Docker
-* GitHub Actions
-* GHCR
-
-### Monitoring
-
-* CloudWatch Logs
-* Metrics
-* Alarms
-
-### OS & Tools
-
-* Linux
-* Nginx
-* Git
+### Monitoring & Security
+![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4500?style=flat-square&logo=amazonaws&logoColor=white)
+![IAM](https://img.shields.io/badge/IAM-DD344C?style=flat-square&logo=amazonaws&logoColor=white)
 
 ---
 
-## 04 — Core Strengths
+## 04 — Security Practices
 
-* AWS Infrastructure Design and Operations
-* Infrastructure as Code with Terraform
-* High Availability and Auto-Healing Architectures
-* Debugging and Root Cause Analysis
-* Monitoring and Observability
-* CI/CD Automation and Containerized Deployments
-* Application and Infrastructure Lifecycle Understanding
+- IAM Roles scoped per service (EC2, Lambda)
+- Least-privilege policies applied to infrastructure
+- AWS authentication in CI using **GitHub Actions OIDC**
+- Security Groups with restricted ingress rules
+- No hardcoded credentials — environment variables or AWS Secrets Manager
 
 ---
 
 ## 05 — Open To
 
-| Role                     | Focus                    |
-| ------------------------ | ------------------------ |
-| AWS Cloud Engineer       | Cloud Infrastructure     |
-| Cloud & DevOps Engineer  | Automation & Reliability |
-| Infrastructure Engineer  | AWS & Terraform          |
-| Junior Platform Engineer | Platform Infrastructure  |
+| Role | Type | Focus |
+|---|---|---|
+| **AWS Cloud & DevOps Engineer** | Full-time / Remote | AWS, Terraform, Cloud Infrastructure |
+| **DevOps Engineer — Infra Heavy** | Full-time | AWS, IaC, Scalable Systems |
+| **Junior Platform Engineer** | Full-time | Platform Infrastructure |
 
 ---
 
 ## 06 — Connect
 
-Portfolio: https://harikrish-portfolio25.web.app
+| | |
+|---|---|
+| Portfolio | [harikrish-portfolio25.web.app](https://harikrish-portfolio25.web.app) |
+| LinkedIn | [linkedin.com/in/hari-krish-13300b27a](https://linkedin.com/in/hari-krish-13300b27a) |
+| GitHub | [github.com/Harikrishna2525](https://github.com/Harikrishna2525) |
 
-LinkedIn: https://linkedin.com/in/hari-krish-13300b27a
+---
 
-GitHub: https://github.com/Harikrishna2525
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Build%20%C2%B7%20Deploy%20%C2%B7%20Scale%20%C2%B7%20Monitor&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
+</div>
