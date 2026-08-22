@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=180&section=header&text=Hari%20Krishna&fontSize=52&fontColor=fff&fontAlignY=36&desc=AWS%20Cloud%20DevOps%20Engineer&descAlignY=58&descSize=17&descColor=a5f3fc"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=AWS+Infrastructure+%26+Reliability;Auto+Scaling+%2B+Load+Balanced+Architectures;Terraform+%E2%86%92+AWS+Infrastructure+%E2%86%92+Docker+%E2%86%92+CI%2FCD;Infrastructure+Automation+%26+Monitoring"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=680&lines=AWS+Infrastructure+%26+Reliability;Auto+Scaling+%2B+Load+Balanced+Architectures;Terraform+%E2%86%92+AWS+%E2%86%92+Docker+%E2%86%92+Kubernetes+%E2%86%92+CI%2FCD;Infrastructure+Automation+%26+Monitoring"/>
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 </div>
 
----
+<br/>
 
 ## Role
 
@@ -20,32 +20,25 @@
 
 I build, deploy, and automate applications on AWS using CI/CD pipelines, Docker, and infrastructure as code, with a focus on reliability, scalability, and failure recovery.
 
-My projects emphasize:
+My work centers on:
 
-- Load-balanced architectures
-- CI/CD automation
-- Infrastructure defined using Terraform and Infrastructure as Code principles
+- Load-balanced, self-healing architectures
+- CI/CD automation with GitHub Actions
+- Infrastructure defined with Terraform (IaC)
+- Container orchestration with Kubernetes
 - Observability using AWS-native monitoring
 
----
+<br/>
 
-## 01 — Featured Project
+## 01 — Featured Project: Auto-Healing Deployment Infrastructure on AWS
 
-### Auto-Healing Deployment Infrastructure on AWS
-
-> Terraform · ALB · ASG · Docker · GitHub Actions · GHCR · CloudWatch
+> `Terraform` · `ALB` · `ASG` · `Docker` · `GitHub Actions` · `GHCR` · `CloudWatch`
 
 **Problem**
-
-Applications running on a **single EC2 instance** become unavailable when the instance fails or the application crashes.
-
-Manual deployments also introduce risk and slow down release cycles.
+Applications running on a single EC2 instance become unavailable when the instance fails or the application crashes. Manual deployments also introduce risk and slow down release cycles.
 
 **Solution**
-
-An automated deployment pipeline using **GitHub Actions and Terraform**, combined with **Auto Scaling and load balancing** to replace failed instances and maintain service availability.
-
-Fully automated deployment pipeline from code push to production using Docker and GitHub Actions.
+An automated deployment pipeline using GitHub Actions and Terraform, combined with Auto Scaling and load balancing, to replace failed instances and maintain service availability — fully automated from code push to production.
 
 ```
 git push
@@ -67,9 +60,7 @@ git push
            CloudWatch Alarms + Logs
 ```
 
----
-
-### Failure Scenarios Tested
+**Failure scenarios tested**
 
 | Scenario | Recovery | Outcome |
 |---|---|---|
@@ -79,7 +70,7 @@ git push
 | Bad commit pushed | CI blocked deployment | Infrastructure unchanged |
 | New instance boot | User Data pulled image from GHCR | Instance joined load balancer |
 
----
+<br/>
 
 ## 02 — CI/CD Pipeline
 
@@ -106,10 +97,11 @@ jobs:
 
 **Toolchain:** GitHub Actions · Docker · GHCR · Terraform · AWS CLI
 
+<br/>
 
-## Terraform AWS Infrastructure
+## 03 — Terraform AWS Infrastructure
 
-Terraform-based AWS infrastructure including:
+Terraform-based AWS infrastructure covering:
 
 - VPC & Networking
 - ALB & Auto Scaling
@@ -118,52 +110,81 @@ Terraform-based AWS infrastructure including:
 - IAM & Security
 - Remote State (S3 + DynamoDB)
 
+<br/>
 
----
+## 04 — Kubernetes: Diagnosing a CrashLoopBackOff (Local, Docker Desktop)
 
-## 03 — Technical Stack
+> `Kubernetes` · `Docker Desktop` · `kubectl`
 
-###### Infrastructure & IaC
+**Problem**
+Deployed a containerized app to a local Kubernetes cluster (Docker Desktop). The pod kept restarting instead of reaching a `Running` state — classic `CrashLoopBackOff` behavior: pull image → start container → app crashes → Kubernetes restarts it → crashes again.
 
-![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform\&logoColor=white)
-![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
-![VPC](https://img.shields.io/badge/VPC-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
-![ALB](https://img.shields.io/badge/ALB-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
-![ASG](https://img.shields.io/badge/ASG-FF9900?style=flat-square\&logo=amazonaws&logoColor=white)
-![CloudFront](https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws\&logoColor=white)
+**Diagnosis**
 
+```
+kubectl get pods
+  → STATUS: CrashLoopBackOff, RESTARTS climbing
 
-### CI/CD & Containers
+kubectl describe pod <pod-name>
+  → Events showed the container repeatedly starting and exiting
+  → Root cause traced to missing/incorrect environment
+    config the app needed at startup (DB connection URL)
+```
+
+**Fix**
+
+- Corrected the environment variable so the app had the config it needed at startup
+- Redeployed and confirmed the pod reached `Running` with a stable (non-climbing) restart count via `kubectl get pods`
+
+**What this demonstrates:** reading Kubernetes pod lifecycle states, isolating a root cause with `kubectl describe pod` instead of guessing, and resolving a configuration-driven startup failure rather than just deploying happy-path manifests.
+
+<br/>
+
+## 05 — Technical Stack
+
+**Infrastructure & IaC**
+
+![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
+![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![VPC](https://img.shields.io/badge/VPC-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![ALB](https://img.shields.io/badge/ALB-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![ASG](https://img.shields.io/badge/ASG-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![CloudFront](https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws&logoColor=white)
+
+**CI/CD & Containers**
+
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 ![GHCR](https://img.shields.io/badge/GHCR-181717?style=flat-square&logo=github&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-E95420?style=flat-square&logo=ubuntu&logoColor=white)
 
-### Serverless & Storage
+**Serverless & Storage**
+
 ![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
 ![API Gateway](https://img.shields.io/badge/API_Gateway-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
 ![S3](https://img.shields.io/badge/S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
-![CloudFront](https://img.shields.io/badge/CloudFront-8C4FFF?style=flat-square&logo=amazonaws&logoColor=white)
 
-### Monitoring & Security
+**Monitoring & Security**
+
 ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4500?style=flat-square&logo=amazonaws&logoColor=white)
 ![IAM](https://img.shields.io/badge/IAM-DD344C?style=flat-square&logo=amazonaws&logoColor=white)
 
----
+<br/>
 
-## 04 — Security Practices
+## 06 — Security Practices
 
-- IAM Roles scoped per service (EC2, Lambda)
+- IAM roles scoped per service (EC2, Lambda)
 - Least-privilege policies applied to infrastructure
-- AWS authentication in CI using **GitHub Actions OIDC**
+- AWS authentication in CI using GitHub Actions OIDC
 - Security Groups with restricted ingress rules
 - No hardcoded credentials — environment variables or AWS Secrets Manager
 
----
+<br/>
 
-## 05 — Open To
+## 07 — Open To
 
 | Role | Type | Focus |
 |---|---|---|
@@ -171,9 +192,9 @@ Terraform-based AWS infrastructure including:
 | **DevOps Engineer — Infra Heavy** | Full-time | AWS, IaC, Scalable Systems |
 | **Junior Platform Engineer** | Full-time | Platform Infrastructure |
 
----
+<br/>
 
-## 06 — Connect
+## 08 — Connect
 
 | | |
 |---|---|
@@ -181,7 +202,7 @@ Terraform-based AWS infrastructure including:
 | LinkedIn | [linkedin.com/in/hari-krish-13300b27a](https://linkedin.com/in/hari-krish-13300b27a) |
 | GitHub | [github.com/Harikrishna2525](https://github.com/Harikrishna2525) |
 
----
+<br/>
 
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=100&section=footer&text=Build%20%C2%B7%20Deploy%20%C2%B7%20Scale%20%C2%B7%20Monitor&fontSize=13&fontColor=a5f3fc&fontAlignY=68"/>
