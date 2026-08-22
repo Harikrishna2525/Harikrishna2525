@@ -72,7 +72,20 @@ git push
 
 <br/>
 
-## 02 — CI/CD Pipeline
+## 02 — Terraform AWS Infrastructure
+
+Terraform-based AWS infrastructure covering:
+
+- VPC & Networking
+- ALB & Auto Scaling
+- EC2 Compute
+- CloudFront Delivery
+- IAM & Security
+- Remote State (S3 + DynamoDB)
+
+<br/>
+
+## 03 — CI/CD Pipeline
 
 ```yaml
 # .github/workflows/deploy.yml
@@ -96,19 +109,6 @@ jobs:
 ```
 
 **Toolchain:** GitHub Actions · Docker · GHCR · Terraform · AWS CLI
-
-<br/>
-
-## 03 — Terraform AWS Infrastructure
-
-Terraform-based AWS infrastructure covering:
-
-- VPC & Networking
-- ALB & Auto Scaling
-- EC2 Compute
-- CloudFront Delivery
-- IAM & Security
-- Remote State (S3 + DynamoDB)
 
 <br/>
 
