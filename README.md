@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Harikrishna2525/Harikrishna2525/main/assets/banner.svg" alt="Hari Krishna R - AWS Infrastructure and DevOps Engineer" width="100%" />
+<img src="./assets/banner.svg" alt="Hari Krishna R - AWS Infrastructure and DevOps Engineer" width="100%" />
 
 <br/>
 
@@ -40,7 +40,7 @@ My work is focused on:
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Harikrishna2525/Harikrishna2525/main/assets/stack.svg" alt="AWS, Terraform, Docker, Kubernetes, GitHub Actions, Argo CD, Linux, Trivy, Checkov, Gitleaks, CodeQL, OpenCode" width="100%" />
+<img src="./assets/stack.svg" alt="AWS, Terraform, Docker, Kubernetes, GitHub Actions, Argo CD, Linux, Trivy, Checkov, Gitleaks, CodeQL, OpenCode" width="100%" />
 
 </div>
 
@@ -198,6 +198,6 @@ AI-assisted output is treated as a draft: I review, validate, and test changes b
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Harikrishna2525/Harikrishna2525/main/assets/footer.svg" alt="Build, Automate, Secure, Observe" width="100%" />
+<img src="./assets/footer.svg" alt="Build, Automate, Secure, Observe" width="100%" />
 
 </div>
