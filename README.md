@@ -3,6 +3,7 @@
 <img src="./assets/banner.svg" alt="Hari Krishna R - AWS Infrastructure and DevOps Engineer" width="100%" />
 
 <br/>
+<br>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-harikrish--portfolio25.web.app-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=0B1220)](https://harikrish-portfolio25.web.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hari_Krishna-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hari-krish-13300b27a/)
@@ -13,6 +14,7 @@
 *Building and automating cloud infrastructure, CI/CD pipelines, containerized environments, and secure deployment workflows.*
 
 </div>
+
 
 ---
 
